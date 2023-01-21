@@ -13,9 +13,18 @@ public class Carro{
     String cor;
     String cambio;
     int portas;
-    int capacidadeTanque;
+    private int capacidadeTanque;
     int anoFabricacao;
     int potencia;
+
+    //Construtor - provê valores iniciais
+    public Carro(){
+    }
+    //Sobrecarga 1
+    public Carro(int capacidadeTanque, String marca){
+        this.capacidadeTanque = capacidadeTanque;
+        this.marca = marca;
+    }
 
 
     public void setMarca(String marca){
@@ -25,11 +34,20 @@ public class Carro{
         return this.marca;
     }
 
-
-    //Construtor - provê valores iniciais
-    public Carro(){
-
+    public void setCapacidadeTanque(int litros){
+        this.capacidadeTanque = litros;
     }
+
+    public int getCapacidadeTanque(){
+        return this.capacidadeTanque;
+    }
+
+    public double valorEncherTanque(double precoGasolina){   
+        return (this.capacidadeTanque * precoGasolina);
+    }
+
+
+
 
     //Destrutor - Auxilia na limpeza de memória -
     //    void finalize(){
@@ -37,10 +55,7 @@ public class Carro{
     //      }
 
     //Metodos
-    public double encherTanque(double litros, double precoGasolina){
-        
-        return (litros * precoGasolina);
-    }
+
 
     public void ligar(){}
 
