@@ -1,5 +1,7 @@
 //import edu.nataniel.exercicios.Veiculos.*; Não foi utilizado nos outros exercicios
 import edu.nataniel.exercicios.Aula04.*;
+import edu.nataniel.exercicios.Aula04.interfaces.Calculadora;
+import edu.nataniel.exercicios.Aula04.interfaces.OperacaoMatematica;
 
 public class Aula04 {
     public static void main(String[] args) throws Exception {
@@ -15,7 +17,7 @@ public class Aula04 {
 
     //Herança e Polimorfismo
 
-    
+
     ClasseFilha1 filha1 = new ClasseFilha1();
     ClasseFilha2 filha2 = new ClasseFilha2();
 
@@ -25,6 +27,13 @@ public class Aula04 {
     filha2.Metodo1();
     filha2.Metodo2();
 
+    
+    Calculadora calc = new Calculadora();
+
+    calc.adicao();
+    calc.subtracao();
+    calc.divisao();
+    calc.multiplicacao();
 
     }
 }
